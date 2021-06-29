@@ -713,6 +713,7 @@ header .nav-link {
     display: flex !important;
     align-items: center;
     justify-content: center;
+    transition: 0.4s;
 }
 
 .slick-slide img {
