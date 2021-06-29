@@ -1,0 +1,901 @@
+@import url("../fonts/font/stylesheet.css");
+
+* {
+    box-sizing: border-box;
+    font: 18px "Uniform Pro", SansSerif;
+    color: #000000;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container-fluid {
+    height: 70px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    color: #000000;
+}
+
+.container-fluid a {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.lk-buttons {
+    margin-right: 20px;
+    margin-left: 70px;
+}
+
+.signin, .cart {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.signup, .person {
+    background: #F9E547;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    border: none;
+    padding: 9px 30px 8px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    transition: 0.5s;
+}
+
+.menu {
+    position: absolute;
+    right: 24px;
+    top: 85px;
+    background: #ffffff;
+    width: 215px;
+    height: 160px;
+    color: #000000;
+    z-index: 1000;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.menu ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.menu li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.person {
+    padding: 9px 0 8px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    margin-left: 30px;
+}
+
+.signup:active, .person:active {
+    background: #97999B;
+    transition: 0.5s;
+}
+
+@media (min-width: 576px) {
+    header .modal-dialog {
+        max-width: 996px;
+    }
+}
+
+header .modal-content {
+    height: 600px;
+    border-radius: 50px;
+}
+
+header ul {
+    margin-left: -35px;
+}
+
+.modal.fade.show {
+    backdrop-filter: blur(3px);
+}
+
+.left-part {
+    background: #F9E547;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 0 28px;
+}
+
+.left-part h3 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.left-part h4 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 13px;
+    margin-bottom: 8px;
+    margin-left: 52px;
+}
+
+.left-part p {
+    margin-bottom: 13px;
+    margin-left: 52px;
+}
+
+.left-part .advantages::before {
+    content: url('../img/File.svg');
+    position: absolute;
+}
+
+.left-part .advantages:first-of-type::before {
+    content: url('../img/Card.svg');
+}
+
+.left-part .advantages:last-of-type::before {
+    content: url('../img/Roll.svg');
+}
+
+header .modal-header {
+    border: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+}
+
+header .modal-header button {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+}
+
+.right-part {
+    height: 595px;
+    padding: 50px 45px 0;
+}
+
+.right-part .back, .back-recovery {
+    top: 290px;
+    left: 20px;
+    background: none;
+    border: none;
+}
+
+.right-part h3 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+
+.right-part p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 30px;
+}
+
+.right-part .modal-body {
+    padding: 0;
+}
+
+header .nav-link {
+    color: #000000;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out !important;
+}
+
+.right-part li button {
+    border-bottom: 1px solid #7C7C7C !important;
+    color: #000000 !important;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    line-height: 130% !important;
+    padding: 9px 16px;
+}
+
+.right-part li button:hover {
+    border: none !important;
+    color: #000000 !important;
+}
+
+.right-part li button.active {
+    border: none !important;
+    border-bottom: 2px solid #000000 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 130% !important;
+}
+
+#registerTabContent {
+    margin-bottom: 68px;
+}
+
+.hide {
+    display: none !important;
+    transition: 1s;
+}
+
+.right-part .reg-button {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #ffffff;
+    background: #97999B;
+    border-radius: 50px;
+    height: 40px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    width: 489px;
+    position: relative;
+    margin-bottom: 13px;
+    transition: 0.5s;
+}
+
+.right-part .reg-button:active {
+    background: #747474;
+    transition: 0.5s;
+}
+
+.right-part .reg-button::before {
+    content: url('../img/Mail.svg');
+    position: absolute;
+    top: 12px;
+    left: 34px;
+}
+
+.right-part b {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.right-part .google {
+    background: #DC4437;
+    margin-top: 13px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.right-part .google:active {
+    background: #B52B20;
+    transition: 0.5s;
+}
+
+.right-part .google::before {
+    content: url('../img/Google.svg');
+}
+
+.right-part .facebook {
+    background: #1A76F1;
+    margin-bottom: 60px;
+    transition: 0.5s;
+}
+
+.right-part .facebook:active {
+    background: #044FB2;
+    margin-bottom: 60px;
+    transition: 0.5s;
+}
+
+.right-part .facebook::before {
+    content: url('../img/Facebook.svg');
+}
+
+.right-part .ask {
+    bottom: 54px;
+}
+
+.right-part .goTo {
+    color: #000000;
+    background: none;
+    border: none;
+}
+.right-part .goTo b {
+    color: #000000;
+}
+
+#registrationTab {
+    margin-bottom: 45px;
+}
+
+.registryForm input, .signInForm input, .password-recovery input {
+    width: 489px;
+    margin-bottom: 6px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 8px 34px;
+    color: #000000;
+    font-size: 18px;
+    line-height: 130%;
+    transition: 0.5s;
+}
+
+.signInForm input {
+    margin-bottom: 11px;
+}
+
+.password-recovery input {
+    margin-bottom: 15px;
+}
+
+.registryForm input:focus, .signInForm input:focus, .password-recovery input:focus {
+    border-color: #F9E547;
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.registryForm form button, .signInForm form button, .password-recovery form button {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    background: #F9E547;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    width: 489px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    transition: 0.5s;
+}
+
+.registryForm form button:active, .signInForm form button:active, .password-recovery form button:active {
+    background: #97999B;
+    transition: 0.5s;
+}
+
+.registryForm form, .signInForm form {
+    margin-bottom: 20px;
+}
+
+.password-recovery {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.password-recovery .recovery-text {
+    margin-bottom: 40px;
+}
+
+.signInForm .password-refresh {
+    background: none;
+    border: none;
+    margin-bottom: 120px;
+}
+
+.password-recovery form {
+    margin-bottom: 120px;
+}
+
+.right-part .registryButtons p, .registryForm p, .signInForm p, .password-recovery p {
+    margin-bottom: 0;
+}
+
+#signInModalLabel {
+    margin-top: 22px;
+    margin-bottom: 120px;
+}
+
+#signInModal .facebook {
+    margin-bottom: 100px;
+}
+
+.offcanvas {
+    width: 450px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px 0px 0px 50px;
+}
+
+.offcanvas button {
+    position: absolute;
+    top: 28px;
+    right: 29px;
+}
+
+.offcanvas-header {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.offcanvas-header  h5 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.offcanvas-body {
+    padding-left: 50px;
+}
+
+.offcanvas-body h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #97999B;
+    margin-bottom: 15px;
+}
+
+.offcanvas-body p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #97999B;
+}
+
+#address {
+    margin: 0 200px 100px !important;
+    height: 500px;
+    position: relative;
+}
+
+#address::after {
+    content: url('../img/Design1.png');
+    position: absolute;
+    right: -200px;
+    top: 70px;
+}
+
+#address button {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: #97999B;
+    outline: none;
+}
+
+#address button:focus {
+    box-shadow: none;
+}
+
+#address button.btn::before {
+    content: url('../img/LocateArrow.svg');
+    height: 13px;
+    margin-right: 10px;
+}
+
+#address button.btn::after {
+    content: url('../img/Arrow-down-gray.svg');
+    margin-left: 15px;
+}
+
+#address h1 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 60px;
+}
+
+#addressInput {
+    border: 1px solid #97999B;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding-right: 100px;
+    transition: 0.5s;
+}
+
+#addressInput:focus-within {
+    border: 1px solid #F9E547;
+    transition: 0.5s;
+}
+
+
+#addressInput .search {
+    background: #F9E547;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 4px;
+    margin-right: 45px;
+}
+
+#addressInput img {
+    height: 28px;
+}
+
+#addressInput input {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border: none;
+    outline: none;
+}
+
+#address .modal-content {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    width: 590px;
+    position: relative;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 590px;
+    }
+}
+
+#address .modal-header {
+    border: none;
+    align-self: center;
+    margin: 53px auto;
+}
+
+#address .modal-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+#address .modal-header button {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+}
+
+#address .modal-body {
+    padding: 0;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#address .modal-body button {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+}
+
+#steps {
+    margin: 140px 200px;
+}
+
+#steps h2 {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 35px;
+    color: #97999B;
+    margin-bottom: 100px;
+}
+
+#steps .step-one, #steps .step-two, #steps .step-three {
+    height: 350px;
+    position: relative;
+}
+
+#steps .step-one::before {
+    content: url(../img/Pic1.png);
+    position: absolute;
+}
+
+#steps .step-two b {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#steps .step-two::after {
+    content: url(../img/Pic2.png);
+    position: absolute;
+    right: 0px;
+}
+
+#steps .step-three::before {
+    content: url(../img/Pic3.png);
+    position: absolute;
+}
+
+#steps h3 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+
+#steps p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 0;
+}
+
+#steps .step-two a {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    padding: 16px 68px;
+    background-color: #F9E547;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin-top: 23px;
+}
+
+#steps .step-description {
+     text-align: end;
+     padding-right: 20px;
+ }
+
+#steps .step-two .step-description {
+    text-align: start;
+    padding-left: 20px;
+}
+
+#steps .number {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background-color: #F9E547;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    display: grid;
+}
+
+#repair {
+    margin: 30px 200px;
+}
+
+#repair .about {
+    height: 300px;
+    border-radius: 50px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 35px 100px;
+}
+
+#repair .about-text {
+    margin: 23px 0px;
+}
+
+#repair h3 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+
+#repair li {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+#repair img {
+    height: 230px;
+}
+
+#reviews {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+    transition: 5s;
+    height: 500px;
+}
+
+.slick-slide {
+    text-align: center;
+    width: 350px !important;
+    height: 350px !important;
+    transition: 2s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-slide img {
+    width: 285px !important;
+    height: 285px !important;
+    transition: 2s;
+    margin: auto;
+}
+
+.slick-slide.slick-center {
+    width: 350px !important;
+    height: 350px !important;
+    transition: 2s;
+}
+
+.slick-slide.slick-center img {
+    width: 426px !important;
+    height: 426px !important;
+    transition: 2s;
+}
+
+#faq {
+    margin: 30px 200px;
+}
+
+#faq h2 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+
+.accordion-item, .accordion-item:first-of-type, .accordion-item:last-of-type {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.accordion-header {
+    margin-bottom: 0 !important;
+    height: 50px;
+    border: none;
+    padding: 0 100px;
+}
+
+.accordion-button {
+    height: 50px;
+    outline: none !important;
+    border-radius: 50px !important;
+    border: none !important;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #000000;
+    background-color: #fff;
+    box-shadow: none;
+    outline: 0 !important;
+    outline-color: transparent !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+}
+
+.accordion-button:focus, .accordion-button:active, .accordion-button:active.focus, .accordion-button:active:focus {
+    outline: 0 !important;
+    outline-color: transparent !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    background-image: url(../img/Arrow-down.svg);
+    margin-top: 5px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../img/Arrow-down.svg);
+    margin-bottom: 10px;
+}
+
+.accordion-body {
+    padding: 20px 100px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: justify;
+}
+
+footer {
+    height: 500px;
+    background: #97999B;
+}
+
+.footer-contacts {
+    height: 400px;
+}
+
+.footer-contacts img {
+    height: 45px;
+}
+
+.footer-contacts .text {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 10px !important;
+}
+
+.footer-contacts button {
+    width: 285px;
+    height: 50px;
+    padding: 16px 101px 16px 102px !important;
+    margin: 20px 0px 0px 0px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    position: relative;
+}
+
+.footer-contacts .telegram-link {
+    background: #0088CC;
+    transition: 0.5s;
+}
+
+.footer-contacts .telegram-link:active {
+    background: #006192;
+    transition: 0.5s;
+}
+
+.footer-contacts .telegram-link::before {
+    content: url("../img/Telegram.svg");
+    position: absolute;
+    left: 24px;
+    top: 15px;
+}
+
+.footer-contacts .whatsapp-link {
+    background: #43D854;
+    transition: 0.5s;
+}
+
+.footer-contacts .whatsapp-link:active {
+    background: #2DA73B;
+    transition: 0.5s;
+}
+
+.footer-contacts .whatsapp-link::before {
+    content: url("../img/WhatsApp.svg");
+    position: absolute;
+    left: 24px;
+    top: 15px;
+}
+
+.footer-contacts .contact {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 200%;
+    font-style: normal;
+    margin-bottom: 6px;
+}
+
+.footer-links {
+    height: 100px;
+}
+
+.footer-links img {
+    margin: 0 10px;
+}
+
+.footer-links .left-links a {
+    margin: 0 23px;
+}
