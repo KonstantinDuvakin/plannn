@@ -248,7 +248,7 @@
       <h1>Выберите дизайн-проект для вашей квартиры</h1>
       <div id="addressInput" class="col-12 d-flex">
         <div class="search d-flex justify-content-center align-items-center"><img src="img/Search.svg" alt="Search"></div>
-        <input class="w-75" type="text" placeholder="Введите свой адрес">
+        <input class="w-75 autoComplete" type="text" placeholder="Введите свой адрес">
       </div>
 
       <!-- Modal city choose -->
@@ -481,13 +481,23 @@
 
     // AutoComplete
     const autoCompleteJS = new autoComplete({
-        selector: "#addressInput",
+        wrapper: false,
+        selector: ".autoComplete",
         placeHolder: "Введите свой адрес",
         data: {
-            src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+            src: ["г. Москва, ул. Флотская, д. 76",
+                "г. Москва, ул. Флотская, д. 77",
+                "г. Москва, ул. Флотская, д. 78",
+                "г. Москва, ул. Флотская, д. 79",
+                "г. Москва, ул. Веневская, д. 5",
+                "г. Москва, ул. Цимлянская, д. 24",
+                "г. Москва, ул. Цимлянская, д. 23",
+                "г. Москва, ул. Грекова, д. 7",
+            ],
             cache: true,
         },
         resultsList: {
+            maxResults: 3,
             element: (list, data) => {
                 if (!data.results.length) {
                     // Create "No Results" message element
@@ -495,7 +505,7 @@
                     // Add class to the created element
                     message.setAttribute("class", "no_result");
                     // Add message text content
-                    message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
+                    message.innerHTML = `<span>Не найдено результатов для "${data.query}"</span>`;
                     // Append message element to the results list
                     list.prepend(message);
                 }
