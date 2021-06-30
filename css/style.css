@@ -696,8 +696,15 @@ header .nav-link {
 }
 
 #reviews {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+#reviews h3 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
 }
 
 .slick-track {
@@ -718,15 +725,15 @@ header .nav-link {
 }
 
 .slick-slide img {
-    width: 285px !important;
-    height: 285px !important;
+    width: 340px !important;
+    height: 340px !important;
     transition: 2s;
     margin: auto;
 }
 
 .slick-slide.slick-center {
-    width: 350px !important;
-    height: 350px !important;
+    width: 436px !important;
+    height: 436px !important;
     transition: 2s;
 }
 

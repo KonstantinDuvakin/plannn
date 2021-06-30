@@ -318,17 +318,20 @@
       </div>
     </div>
   </div>
-  <div id="reviews" class="reviews">
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
-    <div><img src="img/Img1.png" alt="Img1"></div>
+  <div id="reviews">
+    <h3>Отзывы</h3>
+    <div class="reviews">
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+      <div><img src="img/Img1.png" alt="Img1"></div>
+    </div>
   </div>
   <div id="faq" class="align-items-center text-center my-5">
     <h2>Часто задаваемые вопросы</h2>
@@ -390,12 +393,12 @@
 <script>
 
     $('.reviews').slick({
-        dots: true,
         infinite: true,
         speed: 2000,
         slidesToShow: 1,
         centerMode: true,
-        variableWidth: true
+        variableWidth: true,
+        focusOnSelect: true,
     });
 
     // $('.reviews').slick({
