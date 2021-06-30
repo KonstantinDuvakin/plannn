@@ -6,6 +6,7 @@
   <!--  <link rel="stylesheet" href="css/bootstrap.min.css">-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.5/dist/css/autoComplete.min.css">
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -32,7 +33,8 @@
           </button>
         </div>
         <div class="hide row col-2 pr-3 justify-content-end lk-buttons">
-          <button type="button" class="mr-4 col-2 px-0 cart" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="cart">
+          <button type="button" class="mr-4 col-2 px-0 cart" data-bs-toggle="offcanvas" data-bs-target="#cart"
+                  aria-controls="cart">
             <img src="img/Cart.svg" alt="Cart">
           </button>
           <button type="button" class="col-2 person">
@@ -176,7 +178,8 @@
 
           <div class="col-8 right-part position-relative">
             <button class="back hide position-absolute"><img src="img/Arrow-left.svg" alt="Back"></button>
-            <button class="back-recovery hide position-absolute"><img src="img/Arrow-left.svg" alt="Back-recovery"></button>
+            <button class="back-recovery hide position-absolute"><img src="img/Arrow-left.svg" alt="Back-recovery">
+            </button>
             <div class="modal-header d-flex justify-content-center">
               <h3 class="modal-title" id="signInModalLabel">Вход на plannn.ru!</h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -196,7 +199,8 @@
                 </div>
               </div>
               <div class="password-recovery hide d-flex flex-column align-items-center">
-                <p class="recovery-text">Пожалуйста, введите свой e-mail, на который мы пришлем ссылку для восстановления пароля.</p>
+                <p class="recovery-text">Пожалуйста, введите свой e-mail, на который мы пришлем ссылку для
+                                         восстановления пароля.</p>
                 <form action="#">
                   <input type="email" class="form-control" placeholder="E-mail">
                   <button type="submit" class="send-link">Отправить ссылку</button>
@@ -240,9 +244,7 @@
 
     <div class="col-10">
       <!-- Button trigger modal city choose-->
-      <button type="button" class="btn d-flex city" data-bs-toggle="modal" data-bs-target="#cityChoose" value="">
-        Укажите город
-      </button>
+      <button type="button" class="btn d-flex city" data-bs-toggle="modal" data-bs-target="#cityChoose" value="">Укажите город</button>
       <h1>Выберите дизайн-проект для вашей квартиры</h1>
       <div id="addressInput" class="col-12 d-flex">
         <div class="search d-flex justify-content-center align-items-center"><img src="img/Search.svg" alt="Search"></div>
@@ -258,8 +260,12 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body col-12">
-              <button class="col-6 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close" value="г. Москва">Москва</button>
-              <button class="col-10 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close" value="Московская область">Московская область</button>
+              <button class="col-6 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close" value="г. Москва">
+                Москва
+              </button>
+              <button class="col-10 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close"
+                      value="Московская область">Московская область
+              </button>
             </div>
           </div>
         </div>
@@ -320,35 +326,18 @@
   </div>
   <div id="reviews">
     <h3>Отзывы</h3>
-    <div class="reviews">
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
-      <div><img src="img/Img1.png" alt="Img1"></div>
+    <div class="reviews"></div>
+    <div class="for-review">
+      <div class="review-text">
+        <p>"Отличное бюджетное решение для людей которые знают, что хотят. За небольшие деньги, вы получаете полный
+           комплект чертежей для строителей, а также полные рекомендации от дизайнеров по мебелировке и декорированию
+           интерьера!"</p>
+      </div>
     </div>
   </div>
   <div id="faq" class="align-items-center text-center my-5">
     <h2>Часто задаваемые вопросы</h2>
-    <div class="accordion" id="accordionPanel">
-      <!--<div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-heading1">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="false" aria-controls="panelsStayOpen-collapse1">
-            В документации есть электрика?
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading1">
-          <div class="accordion-body">
-            Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
-          </div>
-        </div>
-      </div>-->
-    </div>
+    <div class="accordion" id="accordionPanel"></div>
   </div>
   <footer>
     <div class="footer-contacts row text-center align-items-center">
@@ -386,47 +375,146 @@
 </div>
 <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.5/dist/autoComplete.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 <script>
 
+    let reviewData = [
+        {
+            reviewText: '\"Хотелось что-то новое в свою квартиру, а как это конкретно сделать не знала. Предложения от Plannn.ru оказались интересными. По готовому дизайн-проекту я сделала то, что не могла сделать самостоятельно. Получилось уютно, мило. Я очень довольна результатом.\"',
+            designImage: 'img/Img1.svg',
+            name: 'Полина',
+            address: 'г. Москва, ул. Дубнинская, д. 13',
+            profilePhoto: 'img/Photo1.svg',
+        },
+        {
+            reviewText: '\"Дизайн-проект выполнен отлично, со всеми рабочими чертежами и с красивыми визуализациями. Plannn.ru, спасибо за проделанную работу. Узнал много полезной информации и в будущем буду обязательно к вам обращаться.\"',
+            designImage: 'img/Img2.svg',
+            name: 'Сергей',
+            address: 'г. Москва, ул. Грекова, д. 7',
+            profilePhoto: 'img/Photo2.svg',
+        },
+        {
+            reviewText: '\"Отличное бюджетное решение для людей которые знают, что хотят. За небольшие деньги, вы получаете полный комплект чертежей для строителей, а также полные рекомендации от дизайнеров по мебелировке и декорированию интерьера!\"',
+            designImage: 'img/Img3.svg',
+            name: 'Оксана',
+            address: 'г. Москва, ул. Шолохова, д. 1',
+            profilePhoto: 'img/Photo3.svg',
+        },
+        {
+            reviewText: '\"Ребята молодцы. Сразу получить проект - это что-то невероятное). Рекомендую всем желающим сэкономить свои деньги и время.\"',
+            designImage: 'img/Img4.svg',
+            name: 'Алёна',
+            address: 'г. Москва, ул. Флотская, д. 76',
+            profilePhoto: 'img/Photo4.svg',
+        },
+        {
+            reviewText: '\"Plannn.ru - это выгодный сервис, когда нужно быстро получить готовый проект. Мы остались очень довольны!\"',
+            designImage: 'img/Img5.svg',
+            name: 'Дмитрий',
+            address: 'г. Москва, ул. Цимлянская, д. 24',
+            profilePhoto: 'img/Photo5.svg',
+        },
+        {
+            reviewText: '\"Хочу выразить благодарность компании Plannn.ru за своевременное и качественное выполнение работ по ремонту и отделке квартиры. Благодаря инновационным программным решениям нам удалось в кратчайшие сроки получить дизайн-проект своей будущей квартиры и верно рассчитать затраты на его реализацию.\"',
+            designImage: 'img/Img6.svg',
+            name: 'Екатерина',
+            address: 'г. Москва, ул. Веневская, д. 5',
+            profilePhoto: 'img/Photo6.svg',
+        },
+    ]
+
+    let reviews = document.querySelector('.reviews');
+    for (let i = 0; i < reviewData.length; i++) {
+        let div = document.createElement('div');
+        div.innerHTML = `<img src="${reviewData[i].designImage}" alt="Img${i}">
+        <div class="review-who d-flex justify-content-start align-items-center">
+          <img src="${reviewData[i].profilePhoto}" alt="Photo${i}">
+          <div class="review-who-text">
+            <h5>${reviewData[i].name}</h5>
+            <p>${reviewData[i].address}</p>
+          </div>
+        </div>`;
+        reviews.append(div);
+    }
+
     $('.reviews').slick({
+        arrows: false,
         infinite: true,
-        speed: 2000,
+        speed: 400,
         slidesToShow: 1,
+        initialSlide: 2,
         centerMode: true,
         variableWidth: true,
         focusOnSelect: true,
     });
 
-    // $('.reviews').slick({
-    //     centerMode: true,
-    //     centerPadding: '60px',
-    //     slidesToShow: 5,
-    //     draggable: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 arrows: false,
-    //                 centerMode: true,
-    //                 centerPadding: '40px',
-    //                 slidesToShow: 5
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 arrows: false,
-    //                 centerMode: true,
-    //                 centerPadding: '40px',
-    //                 slidesToShow: 1
-    //             }
-    //         }
-    //     ]
-    // });
+    let reviewText = document.querySelector('.review-text');
+
+    $('.reviews').on('afterChange', function (event, slick, currentSlide) {
+        console.log('afterChange, currentSlide: ', currentSlide);
+        switch (currentSlide) {
+            case 0 :
+                reviewText.innerHTML = `<p>${reviewData[0].reviewText}</p>`;
+                break;
+            case 1 :
+                reviewText.innerHTML = `<p>${reviewData[1].reviewText}</p>`;
+                break;
+            case 2 :
+                reviewText.innerHTML = `<p>${reviewData[2].reviewText}</p>`;
+                break;
+            case 3 :
+                reviewText.innerHTML = `<p>${reviewData[3].reviewText}</p>`;
+                break;
+            case 4 :
+                reviewText.innerHTML = `<p>${reviewData[4].reviewText}</p>`;
+                break;
+            case 5 :
+                reviewText.innerHTML = `<p>${reviewData[5].reviewText}</p>`;
+                break;
+        }
+
+    });
+
+    // AutoComplete
+    const autoCompleteJS = new autoComplete({
+        selector: "#addressInput",
+        placeHolder: "Введите свой адрес",
+        data: {
+            src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+            cache: true,
+        },
+        resultsList: {
+            element: (list, data) => {
+                if (!data.results.length) {
+                    // Create "No Results" message element
+                    const message = document.createElement("div");
+                    // Add class to the created element
+                    message.setAttribute("class", "no_result");
+                    // Add message text content
+                    message.innerHTML = `<span>Found No Results for "${data.query}"</span>`;
+                    // Append message element to the results list
+                    list.prepend(message);
+                }
+            },
+            noResults: true,
+        },
+        resultItem: {
+            highlight: false
+        },
+        events: {
+            input: {
+                selection: (event) => {
+                    const selection = event.detail.selection.value;
+                    autoCompleteJS.input.value = selection;
+                }
+            }
+        }
+    });
+
 
     let questionsData = [
         {
@@ -551,7 +639,6 @@
     function cityChoose(e) {
         let city = e.target.value;
         cityPlace.textContent = `${city}`;
-
     }
 
     cityButtons.forEach(el => {
