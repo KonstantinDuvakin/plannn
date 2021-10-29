@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Дизайн-проекты</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.5/dist/css/autoComplete.min.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/design-styles.css">
+</head>
+<body>
+<div class="all">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand col-1 mr-5" href="#"><img src="img/logo.svg" alt="logo"></a>
+        <ul class="navbar-nav col-7 mr-4">
+          <li class="nav-item mr-3">
+            <button class="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#personalProject">
+              Индивидуальный проект
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Мебель</a>
+          </li>
+        </ul>
+        <div class="row col-3 pr-3 justify-content-around enter-buttons">
+          <button type="button" class="px-2 mr-4 col-3 signin" data-bs-toggle="modal" data-bs-target="#signInModal">
+            Войти
+          </button>
+          <button type="button" class="col-7 signup" data-bs-toggle="modal" data-bs-target="#registrationModal">
+            Регистрация
+          </button>
+        </div>
+        <div class="hide row col-2 pr-3 justify-content-end lk-buttons">
+          <button type="button" class="mr-4 col-2 px-0 cart" data-bs-toggle="offcanvas" data-bs-target="#cart"
+                  aria-controls="cart">
+            <img src="img/Cart.svg" alt="Cart">
+          </button>
+          <button type="button" class="col-2 person">
+            <img src="img/Person.svg" alt="Person">
+          </button>
+          <div class="menu hide">
+            <ul>
+              <li><a class="item" href="#">Профиль</a></li>
+              <li><a class="item" href="#">Настройки</a></li>
+              <li><a class="item" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--    Personal project modal-->
+
+    <div class="modal fade" id="personalProject" tabindex="-1" aria-labelledby="personalProjectModal"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered justify-content-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="personalProjectModal">Заказать индивидуальный проект</h5>
+            <p>Заполните форму ниже и мы свяжемся для дальнейшей консультации</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body col-12">
+            <form action="#" class="text-center">
+              <input type="text" class="form-control" placeholder="Полное имя">
+              <input type="tel" class="form-control phone-mask" placeholder="+7 (999) 999-99-99">
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--    Registration modal window-->
+
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content row flex-row">
+
+          <!--          left part-->
+
+          <div class="col-4 left-part d-flex align-items-center flex-column justify-content-center">
+            <h3>Преимущества plannn.ru</h3>
+            <div class="advantages d-flex align-items-center">
+              <div>
+                <h4>Доступные цены</h4>
+                <p>Готовые дизайн-проекты для вашей квартиры</p>
+              </div>
+            </div>
+            <div class="advantages d-flex align-items-center">
+              <div>
+                <h4>Большой выбор проектов</h4>
+                <p>Найдите нужный проект по вашему вкусу</p>
+              </div>
+            </div>
+            <div class="advantages d-flex align-items-center">
+              <div>
+                <h4>Список материалов и мебели</h4>
+                <p>Полный список материалов и мебели проекта</p>
+              </div>
+            </div>
+          </div>
+
+          <!--          right part-->
+
+          <div class="col-8 right-part position-relative">
+            <button class="back hide position-absolute"><img src="img/Arrow-left.svg" alt="Back"></button>
+            <div class="modal-header d-flex justify-content-center">
+              <h3 class="modal-title" id="registrationModalLabel">Добро пожаловать на Plannn.ru!</h3>
+              <p>Создайте аккаунт, чтобы получить доступ ко всем возможностям plannn.ru</p>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="nav nav-tabs" id="registrationTab" role="tablist">
+                <li class="nav-item w-50" role="presentation">
+                  <button class="nav-link w-100 active" id="privateAcc-tab" data-bs-toggle="tab"
+                          data-bs-target="#privateAcc"
+                          type="button" role="tab" aria-controls="privateAcc" aria-selected="true">Персональный аккаунт
+                  </button>
+                </li>
+                <li class="nav-item w-50" role="presentation">
+                  <button class="nav-link w-100" id="designerAcc-tab" data-bs-toggle="tab" data-bs-target="#designerAcc"
+                          type="button"
+                          role="tab" aria-controls="designerAcc" aria-selected="false">Аккаунт дизайнера
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="registerTabContent">
+                <div class="tab-pane fade show active" id="privateAcc" role="tabpanel" aria-labelledby="privateAcc-tab">
+                  <div class="registryForm hide">
+                    <form action="#" class="d-flex justify-content-center flex-column align-items-center">
+                      <input type="text" class="form-control" placeholder="Полное имя">
+                      <input type="email" class="form-control" placeholder="E-mail">
+                      <input type="password" class="form-control" placeholder="Пароль">
+                      <input type="password" class="form-control" placeholder="Повторите пароль">
+                      <button type="submit">Зарегистрироваться</button>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                      <p>Уже есть аккаунт?</p>
+                      <button type="button" class="goTo" data-bs-target="#signInModal" data-bs-toggle="modal"
+                              data-bs-dismiss="modal">
+                        <b>Войти</b>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="registryButtons text-center">
+                    <button class="eMail reg-button">Зарегистрироваться через <b>E-mail</b></button>
+                    <br>или<br>
+                    <button class="google reg-button">Зарегистрироваться через <b>Google</b></button>
+                    <button class="facebook reg-button">Зарегистрироваться через <b>Facebook</b></button>
+                    <div class="d-flex justify-content-center">
+                      <p>Уже есть аккаунт?</p>
+                      <button class="goTo" data-bs-target="#signInModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        <b>Войти</b></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="designerAcc" role="tabpanel" aria-labelledby="designerAcc-tab">
+                  <div class="registryForm">
+                    <form action="#" class="d-flex justify-content-center flex-column align-items-center">
+                      <input type="text" class="form-control" placeholder="Полное имя">
+                      <input type="tel" class="form-control phone-mask-designer" placeholder="+7 (999) 999-99-99">
+                      <input type="email" class="form-control" placeholder="E-mail">
+                      <input type="password" class="form-control" placeholder="Пароль">
+                      <input type="password" class="form-control" placeholder="Повторите пароль">
+                      <button type="submit">Зарегистрироваться</button>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                      <p>Уже есть аккаунт?</p>
+                      <button type="button" class="goTo" data-bs-target="#signInModal" data-bs-toggle="modal"
+                              data-bs-dismiss="modal">
+                        <b>Войти</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--    Sign in modal window-->
+
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content row flex-row">
+
+          <!--          left part-->
+
+          <div class="col-4 left-part d-flex align-items-center flex-column justify-content-center">
+            <h3>Добро пожаловать!</h3>
+          </div>
+
+          <!--          right part-->
+
+          <div class="col-8 right-part position-relative">
+            <button class="back hide position-absolute"><img src="img/Arrow-left.svg" alt="Back"></button>
+            <button class="back-recovery hide position-absolute"><img src="img/Arrow-left.svg" alt="Back-recovery">
+            </button>
+            <div class="modal-header d-flex justify-content-center">
+              <h3 class="modal-title" id="signInModalLabel">Вход на plannn.ru!</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="signInForm d-flex flex-column hide">
+                <form action="#" class="d-flex justify-content-center flex-column align-items-center">
+                  <input type="email" class="form-control" placeholder="E-mail">
+                  <input type="password" class="form-control" placeholder="Пароль">
+                  <button type="submit">Войти</button>
+                </form>
+                <button type="button" class="password-refresh">Забыли пароль?</button>
+                <div class="d-flex justify-content-center">
+                  <p>Не зарегистрированы?</p>
+                  <button class="goTo" data-bs-target="#registrationModal" data-bs-toggle="modal"
+                          data-bs-dismiss="modal"><b>Создайте аккаунт</b></button>
+                </div>
+              </div>
+              <div class="password-recovery hide d-flex flex-column align-items-center">
+                <p class="recovery-text">Пожалуйста, введите свой e-mail, на который мы пришлем ссылку для
+                                         восстановления пароля.</p>
+                <form action="#">
+                  <input type="email" class="form-control" placeholder="E-mail">
+                  <button type="submit" class="send-link">Отправить ссылку</button>
+                </form>
+                <div class="d-flex justify-content-center">
+                  <p>Не зарегистрированы?</p>
+                  <button class="goTo" data-bs-target="#registrationModal" data-bs-toggle="modal"
+                          data-bs-dismiss="modal"><b>Создайте аккаунт</b></button>
+                </div>
+              </div>
+              <div class="registryButtons text-center">
+                <button class="eMail reg-button">Вход через <b>E-mail</b></button>
+                <br>или<br>
+                <button class="google reg-button">Вход через <b>Google</b></button>
+                <button class="facebook reg-button">Вход через <b>Facebook</b></button>
+                <div class="d-flex justify-content-center">
+                  <p>Не зарегистрированы?</p>
+                  <button class="goTo" data-bs-target="#registrationModal" data-bs-toggle="modal"
+                          data-bs-dismiss="modal"><b>Создайте аккаунт</b></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+      <div class="offcanvas-header">
+        <h5 id="cartRightLabel">Корзина</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+      </div>
+      <div class="offcanvas-body d-flex justify-content-center align-items-center flex-column text-center">
+        <h5>Корзина пуста</h5>
+        <p>Для выбора дизайн-проектов перейдите в поиск по адресу</p>
+      </div>
+    </div>
+
+  </header>
+  <div id="address" class="d-flex mx-0 align-items-center justify-content-center">
+
+    <div class="col-8">
+
+      <!-- Button trigger modal city choose-->
+
+      <div class="d-flex">
+        <div>
+          <button type="button" class="btn d-flex city" data-bs-toggle="modal" data-bs-target="#cityChoose" value="">
+            Укажите город
+          </button>
+          <div id="addressInput" class="col-12 d-flex">
+            <div class="search d-flex justify-content-center align-items-center">
+              <img src="img/Search.svg" alt="Search">
+            </div>
+            <form action="#">
+              <input class="autoComplete" type="text" placeholder="Введите свой адрес">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal city choose -->
+
+      <div class="modal fade" id="cityChoose" tabindex="-1" aria-labelledby="cityChooseModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cityChooseModal">Выберите регион или город</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body col-12">
+              <button class="col-6 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close" value="г. Москва">
+                Москва
+              </button>
+              <button class="col-10 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close"
+                      value="Московская область">Московская область
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="searchResult" class="none">
+    <h2>г. Москва, ул. Бульвар Бескудниковский, д. 8, к. 2</h2>
+    <div id="foundedProjects" class="d-flex justify-content-center">
+      <div class="buildingInfo">
+        <img src="img/Building-photo1.png" alt="Building">
+        <div class="buildingInfoText">
+          Серия: <b>П-44</b><br>
+          Год постройки: <b>2000</b><br>
+          Количество этажей: <b>14</b><br>
+          Жилых помещений: <b>167</b><br>
+          Признан аварийным: <b>Нет</b>
+        </div>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#projectRequest">Заявка на проект</button>
+      </div>
+      <div class="flatsLayout text-left col-5">
+        <h5>Выберите планировку</h5>
+        <div class="layouts row col-12">
+          <button class="flatLayout col-6">
+            <img src="img/Building1-layout-room1.svg" alt="layout1">
+            <p><b>1-комнатная</b></p>
+            <p>38м<sup><small>2</small></sup></p>
+          </button>
+          <button class="flatLayout col-6">
+            <img src="img/Building1-layout-room2.svg" alt="layout1">
+            <p><b>2-комнатная</b></p>
+            <p>58м<sup><small>2</small></sup></p>
+          </button>
+          <button class="flatLayout col-6">
+            <img src="img/Building1-layout-room3.svg" alt="layout1">
+            <p><b>3-комнатная</b></p>
+            <p>74<sup><small>2</small></sup></p>
+          </button>
+          <button class="flatLayout col-6">
+            <img src="img/Building1-layout-room4.svg" alt="layout1">
+            <p><b>3-комнатная</b></p>
+            <p>80м<sup><small>2</small></sup></p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="layoutResults row col-12 justify-content-between">
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room1.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room2.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room3.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room4.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room5.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room6.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+      <div class="interiorPreview col-4 position-relative">
+        <div class="interiorCard">
+          <div class="intCard">
+            <img class="bg-img" src="img/Interior-room7.png" alt="Interior">
+            <div class="more position-absolute d-flex align-items-center hide">
+              <span>Подробнее</span>
+              <img src="img/Arrow-left-yellow.svg" alt="Arrow">
+            </div>
+            <p>интерьер 2-комнатной</p>
+            <p><b>7320 ₽</b></p>
+            <p>стоимость полного проекта</p>
+          </div>
+          <div class="estimate position-absolute align-items-center">
+            <div class="d-flex">
+              <img src="img/Attention.svg" alt="Attention">
+              <span>смета</span>
+              <div class="stars row">
+                <img src="img/Star-active.svg" alt="Star-active">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+                <img src="img/Star-disabled.svg" alt="Star-disabled">
+              </div>
+            </div>
+            <div class="estimationDesc hide">
+              <p>смета проекта</p>
+              <p>от 1млн ₽</p>
+            </div>
+          </div>
+          <div class="like position-absolute">
+            <img class="likeOutline" src="img/Like-outline.svg" alt="Like">
+            <img class="likeFilled hide" src="img/Like-filled.svg" alt="Like">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="notFound" class="none">
+      <div class="sadFace">
+        <img src="img/Sad-face.svg" alt="Sad-face">
+        <div class="noBuilding">
+          <p>Упс(</p>
+          <p>К сожалению в нашей базе</p>
+          <p>нет вашего дома</p>
+        </div>
+        <div class="noLayout hide">
+          <p>Упс(</p>
+          <p>К сожалению пока нет</p>
+          <p>проектов для вашей квартиры</p>
+        </div>
+      </div>
+      <div class="noBuilding">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#personalProject">Индивидуальный дизайн</button>
+        <p>Вы можете оставить заявку</p>
+        <p>и мы сделаем для вас индивидуальный проект</p>
+      </div>
+      <div class="noLayout hide">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#projectRequest">Заявка на проект</button>
+        <p>Вы можете оставить заявку</p>
+        <p>и мы сделаем дизайн-проект быстрее</p>
+      </div>
+      <div class="findLayout hide">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#projectRequest">Заявка на проект</button>
+        <p>Вы можете оставить заявку</p>
+        <p>чтобы мы сделали больше дизайн-проектов</p>
+      </div>
+    </div>
+  </div>
+
+  <!--  Project request modal-->
+
+  <div class="modal fade" id="projectRequest" tabindex="-1" aria-labelledby="projectRequestModal"
+       aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered justify-content-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectRequestModal">Заявка на проект</h5>
+          <p>по адресу г. Москва, ул. Бульвар Бескудниковский, д. 8, к. 2</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body col-12">
+          <form action="#" class="text-center">
+            <select class="flatPlan" data-display="Ваша планировка?">
+              <option value="default" disabled selected>Ваша планировка?</option>
+              <option value="1room38">1-комнатная <strong>38м<sup><small>2</small></sup></strong></option>
+              <option value="2room50">2-комнатная 50м<sup><small>2</small></sup></b></option>
+              <option value="2room58">2-комнатная 58м<sup><small>2</small></sup></b></option>
+              <option value="3room74">3-комнатная 74м<sup><small>2</small></sup></b></option>
+              <option value="3room80">3-комнатная 80м<sup><small>2</small></sup></b></option>
+            </select>
+            <input type="email" class="form-control" placeholder="E-mail">
+            <p>Укажите e-mail и мы сообщим вам</p>
+            <p>о готовности проектов </p>
+            <button type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-contacts row text-center align-items-center">
+      <div class="col-4">
+        <img src="img/logo.svg" alt="logo">
+      </div>
+      <div class="col-4">
+        <div class="text">Задать вопрос</div>
+        <div>
+          <button class="telegram-link">Telegram</button>
+          <button class="whatsapp-link">WhatsApp</button>
+        </div>
+        <div class="contact">
+          <div class="text">Контакты</div>
+          E-mail: plannn.ru@gmail.com<br>
+          Телефон: +7 900 00 00 007
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="footer-links row text-center align-items-center">
+      <div class="col-4 left-links d-flex align-items-center justify-content-center">
+        <a href="#"><img src="img/Instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="img/YouTube.svg" alt="YouTube"></a>
+        <a href="#"><img src="img/Behance.svg" alt="Behance"></a>
+      </div>
+      <div class="col-4">Все права защищены.<br>2021 &copy; Plannn.ru</div>
+      <div class="col-4 right-links d-flex align-items-center justify-content-center">
+        <img src="img/Visa.svg" alt="Visa">
+        <img src="img/Mastercard.svg" alt="Mastercard">
+        <img src="img/ApplePay.svg" alt="ApplePay">
+      </div>
+    </div>
+  </footer>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.5/dist/autoComplete.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/jquery.nice-select.min.js?ver=213412"></script>
+<script>
+
+    // Redirect
+
+    // let intCard = document.querySelector('.intCard');
+    // intCard.addEventListener('click', () => {
+    //     window.location.replace('http://cv66832.tmweb.ru/details.html');
+    // })
+
+    let intCards = document.querySelectorAll('.intCard');
+    for(let card of intCards) {
+        card.addEventListener('click', () => {
+            window.location.replace('http://cv66832.tmweb.ru/details.html')
+        })
+    }
+
+    // Telephone mask
+
+    var phoneMask = IMask(
+        document.querySelector('.phone-mask'), {
+            mask: '+{7} (000) 000-00-00'
+        });
+
+    var phoneMask = IMask(
+        document.querySelector('.phone-mask-designer'), {
+            mask: '+{7} (000) 000-00-00'
+        });
+
+    // AutoComplete
+
+    let addressesData = [
+        {
+            aria: 'Москва',
+            streets: [
+                {
+                    name: 'Грекова',
+
+                },
+            ]
+        },
+        {
+            aria: 'Московская область'
+        },
+
+    ]
+
+    let autoCompleteData = ["г. Москва, ул. Флотская, д. 76",
+        "г. Москва, ул. Флотская, д. 77",
+        "г. Москва, ул. Флотская, д. 78",
+        "г. Москва, ул. Флотская, д. 79",
+        "г. Москва, ул. Веневская, д. 5",
+        "г. Москва, ул. Цимлянская, д. 24",
+        "г. Москва, ул. Цимлянская, д. 23",
+        "г. Москва, ул. Грекова, д. 7",
+    ]
+
+    const autoCompleteJS = new autoComplete({
+        wrapper: false,
+        selector: ".autoComplete",
+        placeHolder: "Введите свой адрес",
+        data: {
+            src: autoCompleteData,
+            cache: true,
+        },
+        resultsList: {
+            maxResults: 3,
+            element: (list, data) => {
+                if (!data.results.length) {
+                    // Create "No Results" message element
+                    const message = document.createElement("div");
+                    // Add class to the created element
+                    message.setAttribute("class", "no_result");
+                    // Add message text content
+                    message.innerHTML = `<span>Не найдено результатов для "${data.query}"</span>`;
+                    // Append message element to the results list
+                    list.prepend(message);
+                }
+            },
+            noResults: true,
+        },
+        resultItem: {
+            highlight: false
+        },
+        events: {
+            input: {
+                selection: (event) => {
+                    const selection = event.detail.selection.value;
+                    autoCompleteJS.input.value = selection;
+                }
+            }
+        }
+    });
+
+    // Nice-Select
+
+    window.addEventListener('load', function () {
+        $('.flatPlan').niceSelect();
+    })
+
+    let registryForm = document.querySelector('#registerTabContent .registryForm');
+    let registryButtons = document.querySelector('#registrationModal .registryButtons');
+    let eMailButtonRegister = document.querySelector('#registrationModal .eMail');
+    let signInForm = document.querySelector('#signInModal .signInForm');
+    let signInButtons = document.querySelector('#signInModal .registryButtons');
+    let eMailButtonSignIn = document.querySelector('#signInModal .eMail')
+    let backButtonRegister = document.querySelector('#registrationModal .back');
+    let backButtonSignIn = document.querySelector('#signInModal .back');
+    let passwordRecovery = document.querySelector('#signInModal .password-recovery')
+    let backButtonRecovery = document.querySelector('#signInModal .back-recovery');
+    let buttonPasswordRefresh = document.querySelector('#signInModal .password-refresh');
+    let cityPlace = document.querySelector('#address .city');
+    let cityButtons = document.querySelectorAll('#cityChoose .cityButton');
+    let buttonPerson = document.querySelector('header .person');
+    let menu = document.querySelector('header .menu');
+
+    eMailButtonRegister.addEventListener('click', () => {
+        // registryForm.forEach(el => {
+        //     el.classList.toggle('hide');
+        // });
+        registryForm.classList.toggle('hide');
+        registryButtons.classList.toggle('hide');
+        backButtonRegister.classList.toggle('hide');
+    });
+
+    eMailButtonSignIn.addEventListener('click', () => {
+        signInForm.classList.toggle('hide');
+        signInButtons.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+    })
+
+    backButtonRegister.addEventListener('click', () => {
+        // registryForm.forEach(el => {
+        //     el.classList.toggle('hide');
+        // });
+        registryForm.classList.toggle('hide');
+        registryButtons.classList.toggle('hide');
+        backButtonRegister.classList.toggle('hide');
+    })
+
+    backButtonSignIn.addEventListener('click', () => {
+        signInForm.classList.toggle('hide');
+        signInButtons.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+    })
+
+    buttonPasswordRefresh.addEventListener('click', () => {
+        passwordRecovery.classList.toggle('hide');
+        signInForm.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+        backButtonRecovery.classList.toggle('hide');
+    })
+
+    backButtonRecovery.addEventListener('click', () => {
+        signInForm.classList.toggle('hide');
+        passwordRecovery.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+        backButtonRecovery.classList.toggle('hide');
+    })
+
+    buttonPerson.addEventListener('click', () => {
+        menu.classList.toggle('hide');
+    })
+
+    function cityChoose(e) {
+        let city = e.target.value;
+        cityPlace.textContent = `${city}`;
+    };
+
+    cityButtons.forEach(el => {
+        el.addEventListener('click', cityChoose)
+    });
+
+    let addressInput = document.querySelector('#addressInput');
+    let autoCompleteInput = document.querySelector('.autoComplete');
+    let search = document.querySelector('.search');
+    let addressInputUl = document.querySelector('#addressInput ul');
+
+    autoCompleteInput.addEventListener('focus', () => {
+        // addressInput.style.borderBottomLeftRadius = 0;
+        // addressInput.style.borderBottomRightRadius = 0;
+        // addressInput.style.borderBottom = 0;
+        // addressInput.style.boxShadow = 'none';
+        search.style.opacity = 0;
+        search.style.transition = '0.5s';
+    })
+
+    autoCompleteInput.addEventListener('blur', () => {
+        // addressInput.style.borderRadius = '50px';
+        // addressInput.style.border = '1px solid #97999B';
+        // addressInput.style.boxShadow = '0px 5px 20px rgba(0, 0, 0, 0.1)';
+        search.style.opacity = 1;
+    })
+
+    let layoutRes = document.querySelector('.layoutResults');
+    let estimDesc = document.querySelector('.estimationDesc');
+    layoutRes.addEventListener('click', (event) => {
+        let target = event.target;
+        let estimate = target.closest('.estimate');
+        let like = target.closest('.like');
+        if (!estimate && like) {
+            like.querySelector('.likeOutline').classList.toggle('hide');
+            like.querySelector('.likeFilled').classList.toggle('hide');
+        } else if (estimate && !like) {
+            estimate.classList.toggle('active');
+            estimate.querySelector('.estimationDesc').classList.toggle('hide');
+        } else {
+            return;
+        }
+    });
+
+    layoutRes.addEventListener('mouseover', (event) => {
+        let target = event.target;
+        let interiorPreview = event.target.closest('.interiorPreview');
+
+        if (!interiorPreview) return;
+
+        interiorPreview.querySelector('.more').classList.remove('hide');
+    });
+
+    layoutRes.addEventListener('mouseout', (event) => {
+        let target = event.target;
+        let interiorPreview = event.target.closest('.interiorPreview');
+
+        if (!interiorPreview) return;
+
+        interiorPreview.querySelector('.more').classList.add('hide');
+    });
+
+
+</script>
+</body>
+</html>

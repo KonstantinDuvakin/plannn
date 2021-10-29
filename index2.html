@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Главная</title>
+  <!--  <link rel="stylesheet" href="css/bootstrap.min.css">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.5/dist/css/autoComplete.min.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="all">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand col-1 mr-5" href="#"><img src="img/logo.svg" alt="logo"></a>
+        <ul class="navbar-nav col-7 mr-4">
+          <li class="nav-item mr-3">
+            <button class="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#personalProject">
+              Индивидуальный проект
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Мебель</a>
+          </li>
+        </ul>
+        <div class="row col-3 pr-3 justify-content-around enter-buttons">
+          <button type="button" class="px-2 mr-4 col-3 signin" data-bs-toggle="modal" data-bs-target="#signInModal">
+            Войти
+          </button>
+          <button type="button" class="col-7 signup" data-bs-toggle="modal" data-bs-target="#registrationModal">
+            Регистрация
+          </button>
+        </div>
+        <div class="hide row col-2 pr-3 justify-content-end lk-buttons">
+          <button type="button" class="mr-4 col-2 px-0 cart" data-bs-toggle="offcanvas" data-bs-target="#cart"
+                  aria-controls="cart">
+            <img src="img/Cart.svg" alt="Cart">
+          </button>
+          <button type="button" class="col-2 person">
+            <img src="img/Person.svg" alt="Person">
+          </button>
+          <div class="menu hide">
+            <ul>
+              <li><a class="item" href="#">Профиль</a></li>
+              <li><a class="item" href="#">Настройки</a></li>
+              <li><a class="item" href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--    Personal project modal-->
+
+    <div class="modal fade" id="personalProject" tabindex="-1" aria-labelledby="personalProjectModal"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered justify-content-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="personalProjectModal">Заказать индивидуальный проект</h5>
+            <p>Заполните форму ниже и мы свяжемся для дальнейшей консультации</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body col-12">
+            <form action="#" class="text-center">
+              <input type="text" class="form-control" placeholder="Полное имя">
+              <input type="tel" class="form-control phone-mask" placeholder="+7 (999) 999-99-99">
+              <button type="submit">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--    Registration modal window-->
+
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content row flex-row">
+
+          <!--          left part-->
+
+          <div class="col-4 left-part d-flex align-items-center flex-column justify-content-center">
+            <h3>Преимущества plannn.ru</h3>
+            <div class="advantages d-flex align-items-center">
+              <div>
+                <h4>Доступные цены</h4>
+                <p>Готовые дизайн-проекты для вашей квартиры</p>
+              </div>
+            </div>
+            <div class="advantages d-flex align-items-center">
+              <div>
+                <h4>Большой выбор проектов</h4>
+                <p>Найдите нужный проект по вашему вкусу</p>
+              </div>
+            </div>
+            <div class="advantages d-flex align-items-center">
+              <div>
+                <h4>Список материалов и мебели</h4>
+                <p>Полный список материалов и мебели проекта</p>
+              </div>
+            </div>
+          </div>
+
+          <!--          right part-->
+
+          <div class="col-8 right-part position-relative">
+            <button class="back hide position-absolute"><img src="img/Arrow-left.svg" alt="Back"></button>
+            <div class="modal-header d-flex justify-content-center">
+              <h3 class="modal-title" id="registrationModalLabel">Добро пожаловать на Plannn.ru!</h3>
+              <p>Создайте аккаунт, чтобы получить доступ ко всем возможностям plannn.ru</p>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="nav nav-tabs" id="registrationTab" role="tablist">
+                <li class="nav-item w-50" role="presentation">
+                  <button class="nav-link w-100 active" id="privateAcc-tab" data-bs-toggle="tab"
+                          data-bs-target="#privateAcc"
+                          type="button" role="tab" aria-controls="privateAcc" aria-selected="true">Персональный аккаунт
+                  </button>
+                </li>
+                <li class="nav-item w-50" role="presentation">
+                  <button class="nav-link w-100" id="designerAcc-tab" data-bs-toggle="tab" data-bs-target="#designerAcc"
+                          type="button"
+                          role="tab" aria-controls="designerAcc" aria-selected="false">Аккаунт дизайнера
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="registerTabContent">
+                <div class="tab-pane fade show active" id="privateAcc" role="tabpanel" aria-labelledby="privateAcc-tab">
+                  <div class="registryForm hide">
+                    <form action="#" class="d-flex justify-content-center flex-column align-items-center">
+                      <input type="text" class="form-control" placeholder="Полное имя">
+                      <input type="email" class="form-control" placeholder="E-mail">
+                      <input type="password" class="form-control" placeholder="Пароль">
+                      <input type="password" class="form-control" placeholder="Повторите пароль">
+                      <button type="submit">Зарегистрироваться</button>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                      <p>Уже есть аккаунт?</p>
+                      <button type="button" class="goTo" data-bs-target="#signInModal" data-bs-toggle="modal"
+                              data-bs-dismiss="modal">
+                        <b>Войти</b>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="registryButtons text-center">
+                    <button class="eMail reg-button">Зарегистрироваться через <b>E-mail</b></button>
+                    <br>или<br>
+                    <button class="google reg-button">Зарегистрироваться через <b>Google</b></button>
+                    <button class="facebook reg-button">Зарегистрироваться через <b>Facebook</b></button>
+                    <div class="d-flex justify-content-center">
+                      <p>Уже есть аккаунт?</p>
+                      <button class="goTo" data-bs-target="#signInModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        <b>Войти</b></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="designerAcc" role="tabpanel" aria-labelledby="designerAcc-tab">
+                  <div class="registryForm">
+                    <form action="#" class="d-flex justify-content-center flex-column align-items-center">
+                      <input type="text" class="form-control" placeholder="Полное имя">
+                      <input type="tel" class="form-control phone-mask-designer" placeholder="+7 (999) 999-99-99">
+                      <input type="email" class="form-control" placeholder="E-mail">
+                      <input type="password" class="form-control" placeholder="Пароль">
+                      <input type="password" class="form-control" placeholder="Повторите пароль">
+                      <button type="submit">Зарегистрироваться</button>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                      <p>Уже есть аккаунт?</p>
+                      <button type="button" class="goTo" data-bs-target="#signInModal" data-bs-toggle="modal"
+                              data-bs-dismiss="modal">
+                        <b>Войти</b>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--    Sign in modal window-->
+
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content row flex-row">
+
+          <!--          left part-->
+
+          <div class="col-4 left-part d-flex align-items-center flex-column justify-content-center">
+            <h3>Добро пожаловать!</h3>
+          </div>
+
+          <!--          right part-->
+
+          <div class="col-8 right-part position-relative">
+            <button class="back hide position-absolute"><img src="img/Arrow-left.svg" alt="Back"></button>
+            <button class="back-recovery hide position-absolute"><img src="img/Arrow-left.svg" alt="Back-recovery">
+            </button>
+            <div class="modal-header d-flex justify-content-center">
+              <h3 class="modal-title" id="signInModalLabel">Вход на plannn.ru!</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="signInForm d-flex flex-column hide">
+                <form action="#" class="d-flex justify-content-center flex-column align-items-center">
+                  <input type="email" class="form-control" placeholder="E-mail">
+                  <input type="password" class="form-control" placeholder="Пароль">
+                  <button type="submit">Войти</button>
+                </form>
+                <button type="button" class="password-refresh">Забыли пароль?</button>
+                <div class="d-flex justify-content-center">
+                  <p>Не зарегистрированы?</p>
+                  <button class="goTo" data-bs-target="#registrationModal" data-bs-toggle="modal"
+                          data-bs-dismiss="modal"><b>Создайте аккаунт</b></button>
+                </div>
+              </div>
+              <div class="password-recovery hide d-flex flex-column align-items-center">
+                <p class="recovery-text">Пожалуйста, введите свой e-mail, на который мы пришлем ссылку для
+                                         восстановления пароля.</p>
+                <form action="#">
+                  <input type="email" class="form-control" placeholder="E-mail">
+                  <button type="submit" class="send-link">Отправить ссылку</button>
+                </form>
+                <div class="d-flex justify-content-center">
+                  <p>Не зарегистрированы?</p>
+                  <button class="goTo" data-bs-target="#registrationModal" data-bs-toggle="modal"
+                          data-bs-dismiss="modal"><b>Создайте аккаунт</b></button>
+                </div>
+              </div>
+              <div class="registryButtons text-center">
+                <button class="eMail reg-button">Вход через <b>E-mail</b></button>
+                <br>или<br>
+                <button class="google reg-button">Вход через <b>Google</b></button>
+                <button class="facebook reg-button">Вход через <b>Facebook</b></button>
+                <div class="d-flex justify-content-center">
+                  <p>Не зарегистрированы?</p>
+                  <button class="goTo" data-bs-target="#registrationModal" data-bs-toggle="modal"
+                          data-bs-dismiss="modal"><b>Создайте аккаунт</b></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+      <div class="offcanvas-header">
+        <h5 id="cartRightLabel">Корзина</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+      </div>
+      <div class="offcanvas-body d-flex justify-content-center align-items-center flex-column text-center">
+        <h5>Корзина пуста</h5>
+        <p>Для выбора дизайн-проектов перейдите в поиск по адресу</p>
+      </div>
+    </div>
+
+  </header>
+  <div>
+    <div id="address" class="d-flex mx-0 align-items-center">
+
+      <div class="col-8">
+
+        <!-- Button trigger modal city choose-->
+
+        <div class="d-flex">
+          <div>
+            <button type="button" class="btn d-flex city" data-bs-toggle="modal" data-bs-target="#cityChoose" value="">
+              Укажите город
+            </button>
+            <h1>Выберите дизайн-проект для вашей квартиры</h1>
+            <div id="addressInput" class="col-12 d-flex">
+              <div class="search d-flex justify-content-center align-items-center">
+                <img src="img/Search.svg" alt="Search">
+              </div>
+              <form action="#">
+                <input class="autoComplete" type="text" placeholder="Введите свой адрес">
+              </form>
+            </div>
+          </div>
+          <div class="switchDesign">
+            <div class="design"><img src="img/Design1.png" alt="Design1"></div>
+            <div class="design"><img src="img/Design2.png" alt="Design2"></div>
+            <div class="design"><img src="img/Design3.png" alt="Design3"></div>
+            <div class="design"><img src="img/Design4.png" alt="Design4"></div>
+            <div class="design"><img src="img/Design5.png" alt="Design5"></div>
+          </div>
+        </div>
+
+        <!-- Modal city choose -->
+
+        <div class="modal fade" id="cityChoose" tabindex="-1" aria-labelledby="cityChooseModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered justify-content-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cityChooseModal">Выберите регион или город</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body col-12">
+                <button class="col-6 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close" value="г. Москва">
+                  Москва
+                </button>
+                <button class="col-10 btn-close cityButton" data-bs-dismiss="modal" aria-label="Close"
+                        value="Московская область">Московская область
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="steps">
+      <h2 class="text-center">Как это работает?</h2>
+      <div class="step-one row">
+        <div class="text-right row align-items-center justify-content-end mx-0">
+          <div class="col-6 step-description">
+            <h3>Найдите свой дом</h3>
+            <p>Укажите адрес своего дома и выберите свою планировку квартиры</p>
+          </div>
+          <div class="text-center align-items-center col-1 number px-0">1</div>
+        </div>
+      </div>
+      <div class="step-two row">
+        <div class="text-left row align-items-center justify-content-start mx-0">
+          <div class="text-center align-items-center col-1 number px-0">2</div>
+          <div class="col-6 step-description">
+            <h3>Выберите готовый проект</h3>
+            <p>Вам не нужно ждать разработку дизайна,
+               полноценные дизайн-проекты уже доступны для вашей
+               квартиры по доступным ценам <b>от 3200 рублей.</b>
+            </p>
+            <a class="btn" href="#" role="button">Пример проекта</a>
+          </div>
+        </div>
+      </div>
+      <div class="step-three row">
+        <div class="text-right row align-items-center justify-content-end mx-0">
+          <div class="col-6 step-description">
+            <h3>Создайте идеальный интерьер</h3>
+            <p>По нашему дизайн-проекту вы с легкостью можете сделать ремонт сами или заказать строительную бригаду у
+               нас.</p>
+          </div>
+          <div class="text-center align-items-center col-1 number px-0">3</div>
+        </div>
+      </div>
+    </div>
+    <div id="repair">
+      <div class="about row justify-content-between">
+        <div class="about-text col-7 align-items-center">
+          <h3>О нашем ремонте</h3>
+          <ul class="align-items-center">
+            <li>После покупки проекта вам будут доступны наши бригады строителей</li>
+            <li>Мы назначаем руководителя работ</li>
+            <li>Выводим на квартиру проверенную бригаду</li>
+            <li>Несём за неё полную ответственность</li>
+            <li>Проводим безопасную оплату</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <img src="img/Helmet.svg" alt="Helmet">
+        </div>
+      </div>
+    </div>
+    <div id="reviews">
+      <h3>Отзывы</h3>
+      <div class="reviews"></div>
+      <div class="for-review">
+        <div class="review-text">
+          <p>"Отличное бюджетное решение для людей которые знают, что хотят. За небольшие деньги, вы получаете полный
+             комплект чертежей для строителей, а также полные рекомендации от дизайнеров по мебелировке и декорированию
+             интерьера!"</p>
+        </div>
+      </div>
+    </div>
+    <div id="faq" class="align-items-center text-center my-5">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="accordion" id="accordionPanel"></div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-contacts row text-center align-items-center">
+      <div class="col-4">
+        <img src="img/logo.svg" alt="logo">
+      </div>
+      <div class="col-4">
+        <div class="text">Задать вопрос</div>
+        <div>
+          <button class="telegram-link">Telegram</button>
+          <button class="whatsapp-link">WhatsApp</button>
+        </div>
+        <div class="contact">
+          <div class="text">Контакты</div>
+          E-mail: plannn.ru@gmail.com<br>
+          Телефон: +7 900 00 00 007
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="footer-links row text-center align-items-center">
+      <div class="col-4 left-links d-flex align-items-center justify-content-center">
+        <a href="#"><img src="img/Instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="img/YouTube.svg" alt="YouTube"></a>
+        <a href="#"><img src="img/Behance.svg" alt="Behance"></a>
+      </div>
+      <div class="col-4">Все права защищены.<br>2021 &copy; Plannn.ru</div>
+      <div class="col-4 right-links d-flex align-items-center justify-content-center">
+        <img src="img/Visa.svg" alt="Visa">
+        <img src="img/Mastercard.svg" alt="Mastercard">
+        <img src="img/ApplePay.svg" alt="ApplePay">
+      </div>
+    </div>
+  </footer>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.5/dist/autoComplete.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/jquery.nice-select.min.js?ver=213412"></script>
+<script>
+
+    // Redirect
+
+    (function() {
+        document.querySelector('.autoComplete').addEventListener('keydown', function(e) {
+            if (e.keyCode === 13) {
+                // можете делать все что угодно со значением текстового поля
+                if(true) {
+                    window.location.replace('http://cv66832.tmweb.ru/design-projects.html')
+                }
+            }
+        });
+    })();
+
+    // Animated design
+
+    $('.design:first').addClass('is-current');
+    setInterval(function () {
+        var $next = $('.design.is-current')
+            .removeClass('is-current')
+            .next('.design');
+
+        $next.length ? $next.addClass('is-current') : $('.design:first').addClass('is-current');
+    }, 10000);
+
+    // Telephone mask
+
+    var phoneMask = IMask(
+        document.querySelector('.phone-mask'), {
+            mask: '+{7} (000) 000-00-00'
+        });
+
+    var phoneMask = IMask(
+        document.querySelector('.phone-mask-designer'), {
+            mask: '+{7} (000) 000-00-00'
+        });
+
+    // Carousel
+
+    let reviewData = [
+        {
+            reviewText: '\"Хотелось что-то новое в свою квартиру, а как это конкретно сделать не знала. Предложения от Plannn.ru оказались интересными. По готовому дизайн-проекту я сделала то, что не могла сделать самостоятельно. Получилось уютно, мило. Я очень довольна результатом.\"',
+            designImage: 'img/Img1.svg',
+            name: 'Полина',
+            address: 'г. Москва, ул. Дубнинская, д. 13',
+            profilePhoto: 'img/Photo1.svg',
+        },
+        {
+            reviewText: '\"Дизайн-проект выполнен отлично, со всеми рабочими чертежами и с красивыми визуализациями. Plannn.ru, спасибо за проделанную работу. Узнал много полезной информации и в будущем буду обязательно к вам обращаться.\"',
+            designImage: 'img/Img2.svg',
+            name: 'Сергей',
+            address: 'г. Москва, ул. Грекова, д. 7',
+            profilePhoto: 'img/Photo2.svg',
+        },
+        {
+            reviewText: '\"Отличное бюджетное решение для людей которые знают, что хотят. За небольшие деньги, вы получаете полный комплект чертежей для строителей, а также полные рекомендации от дизайнеров по мебелировке и декорированию интерьера!\"',
+            designImage: 'img/Img3.svg',
+            name: 'Оксана',
+            address: 'г. Москва, ул. Шолохова, д. 1',
+            profilePhoto: 'img/Photo3.svg',
+        },
+        {
+            reviewText: '\"Ребята молодцы. Сразу получить проект - это что-то невероятное). Рекомендую всем желающим сэкономить свои деньги и время.\"',
+            designImage: 'img/Img4.svg',
+            name: 'Алёна',
+            address: 'г. Москва, ул. Флотская, д. 76',
+            profilePhoto: 'img/Photo4.svg',
+        },
+        {
+            reviewText: '\"Plannn.ru - это выгодный сервис, когда нужно быстро получить готовый проект. Мы остались очень довольны!\"',
+            designImage: 'img/Img5.svg',
+            name: 'Дмитрий',
+            address: 'г. Москва, ул. Цимлянская, д. 24',
+            profilePhoto: 'img/Photo5.svg',
+        },
+        {
+            reviewText: '\"Хочу выразить благодарность компании Plannn.ru за своевременное и качественное выполнение работ по ремонту и отделке квартиры. Благодаря инновационным программным решениям нам удалось в кратчайшие сроки получить дизайн-проект своей будущей квартиры и верно рассчитать затраты на его реализацию.\"',
+            designImage: 'img/Img6.svg',
+            name: 'Екатерина',
+            address: 'г. Москва, ул. Веневская, д. 5',
+            profilePhoto: 'img/Photo6.svg',
+        },
+    ]
+
+    let reviews = document.querySelector('.reviews');
+    for (let i = 0; i < reviewData.length; i++) {
+        let div = document.createElement('div');
+        div.innerHTML = `<img src="${reviewData[i].designImage}" alt="Img${i}">
+        <div class="review-who d-flex justify-content-start align-items-center">
+          <img src="${reviewData[i].profilePhoto}" alt="Photo${i}">
+          <div class="review-who-text">
+            <h5>${reviewData[i].name}</h5>
+            <p>${reviewData[i].address}</p>
+          </div>
+        </div>`;
+        reviews.append(div);
+    }
+
+    $('.reviews').slick({
+        arrows: false,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 1,
+        initialSlide: 2,
+        centerMode: true,
+        variableWidth: true,
+        focusOnSelect: true,
+    });
+
+    let reviewText = document.querySelector('.review-text');
+
+    $('.reviews').on('afterChange', function (event, slick, currentSlide) {
+        console.log('afterChange, currentSlide: ', currentSlide);
+        switch (currentSlide) {
+            case 0 :
+                reviewText.innerHTML = `<p>${reviewData[0].reviewText}</p>`;
+                break;
+            case 1 :
+                reviewText.innerHTML = `<p>${reviewData[1].reviewText}</p>`;
+                break;
+            case 2 :
+                reviewText.innerHTML = `<p>${reviewData[2].reviewText}</p>`;
+                break;
+            case 3 :
+                reviewText.innerHTML = `<p>${reviewData[3].reviewText}</p>`;
+                break;
+            case 4 :
+                reviewText.innerHTML = `<p>${reviewData[4].reviewText}</p>`;
+                break;
+            case 5 :
+                reviewText.innerHTML = `<p>${reviewData[5].reviewText}</p>`;
+                break;
+        }
+
+    });
+
+    // AutoComplete
+
+    let addressesData = [
+        {
+            aria: 'Москва',
+            streets: [
+                {
+                    name: 'Грекова',
+
+                },
+            ]
+        },
+        {
+            aria: 'Московская область'
+        },
+
+    ]
+
+    let autoCompleteData = ["г. Москва, ул. Флотская, д. 76",
+        "г. Москва, ул. Флотская, д. 77",
+        "г. Москва, ул. Флотская, д. 78",
+        "г. Москва, ул. Флотская, д. 79",
+        "г. Москва, ул. Веневская, д. 5",
+        "г. Москва, ул. Цимлянская, д. 24",
+        "г. Москва, ул. Цимлянская, д. 23",
+        "г. Москва, ул. Грекова, д. 7",
+    ]
+
+    const autoCompleteJS = new autoComplete({
+        wrapper: false,
+        selector: ".autoComplete",
+        placeHolder: "Введите свой адрес",
+        data: {
+            src: autoCompleteData,
+            cache: true,
+        },
+        resultsList: {
+            maxResults: 3,
+            element: (list, data) => {
+                if (!data.results.length) {
+                    // Create "No Results" message element
+                    const message = document.createElement("div");
+                    // Add class to the created element
+                    message.setAttribute("class", "no_result");
+                    // Add message text content
+                    message.innerHTML = `<span>Не найдено результатов для "${data.query}"</span>`;
+                    // Append message element to the results list
+                    list.prepend(message);
+                }
+            },
+            noResults: true,
+        },
+        resultItem: {
+            highlight: false
+        },
+        events: {
+            input: {
+                selection: (event) => {
+                    const selection = event.detail.selection.value;
+                    autoCompleteJS.input.value = selection;
+                }
+            }
+        }
+    });
+
+    // FAQ
+
+    let questionsData = [
+        {
+            id: 1,
+            question: 'В документации есть электрика?',
+            answer: 'Да. Мы разрабатываем полную документацию по электрике. Показываем розетки относительно плана мебели, даем отметки высот для розеток, группы включения по освещению и много другое'
+        },
+        {
+            id: 2,
+            question: 'Я смогу купить мебель тех размеров, которые вы планируете?',
+            answer: 'Да, мы используем только стандартные размеры мебели и оборудования, которые вы сможете приобрести в любом магазине. А если вы хотите, чтобы мы учли ваш старинный сундук или диван, который уже подобрали, мы с удовольствием впишем ваши предметы при разработке проекта.'
+        },
+        {
+            id: 3,
+            question: 'Вы учитываете бюджет при проектировании?',
+            answer: 'Да, конечно. При проектировании мы учитываем запланированный бюджет и предлагаем только те решения, которые будут ему соответствовать.'
+        },
+        {
+            id: 4,
+            question: 'Как мне понять сколько и каких материалов необходимо закупить?',
+            answer: 'В нашем проекте есть ведомость отделочных материалов, пользуясь ей вы не ошибетесь при закупке.'
+        },
+        {
+            id: 5,
+            question: 'Если у меня свои строители им будет достаточно вашего проекта?',
+            answer: 'Нашего проекта более чем достаточно для проведения ремонта. Профессиональные строители, которые умеют читать чертежи без труда прочтут документацию. Менее 1% клиентов возвращаются с вопросами по проекту в момент проведения строительных работ.'
+        },
+        {
+            id: 6,
+            question: 'Почему так дешево и в чём подвох?',
+            answer: 'Распределенное проектирование, современные технологии и методы управления позволяют нам предлагать такую стоимость профессиональных проектов.'
+        },
+        {
+            id: 7,
+            question: 'Вы можете порекомендовать строительную бригаду?',
+            answer: 'Да, у нас есть партнеры, за которых мы готовы поручиться и проконтролировать ход проекта совершенно бесплатно.'
+        },
+    ]
+
+    let accordionPanel = document.querySelector('#accordionPanel');
+
+    function renderQuestionBlock() {
+        for (let i = 0; i < questionsData.length; i++) {
+            let div = document.createElement('div');
+            div.classList.add('accordion-item');
+            div.innerHTML = `
+        <h2 class="accordion-header" id="panelsStayOpen-heading${questionsData[i].id}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse${questionsData[i].id}" aria-expanded="false" aria-controls="panelsStayOpen-collapse${questionsData[i].id}">
+            ${questionsData[i].question}
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapse${questionsData[i].id}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading${questionsData[i].id}">
+        <div class="accordion-body">${questionsData[i].answer}</div>`;
+            accordionPanel.append(div);
+        }
+    }
+
+    renderQuestionBlock()
+
+    let registryForm = document.querySelector('#registerTabContent .registryForm');
+    let registryButtons = document.querySelector('#registrationModal .registryButtons');
+    let eMailButtonRegister = document.querySelector('#registrationModal .eMail');
+    let signInForm = document.querySelector('#signInModal .signInForm');
+    let signInButtons = document.querySelector('#signInModal .registryButtons');
+    let eMailButtonSignIn = document.querySelector('#signInModal .eMail')
+    let backButtonRegister = document.querySelector('#registrationModal .back');
+    let backButtonSignIn = document.querySelector('#signInModal .back');
+    let passwordRecovery = document.querySelector('#signInModal .password-recovery')
+    let backButtonRecovery = document.querySelector('#signInModal .back-recovery');
+    let buttonPasswordRefresh = document.querySelector('#signInModal .password-refresh');
+    let cityPlace = document.querySelector('#address .city');
+    let cityButtons = document.querySelectorAll('#cityChoose .cityButton');
+    let buttonPerson = document.querySelector('header .person');
+    let menu = document.querySelector('header .menu');
+
+    eMailButtonRegister.addEventListener('click', () => {
+        // registryForm.forEach(el => {
+        //     el.classList.toggle('hide');
+        // });
+        registryForm.classList.toggle('hide');
+        registryButtons.classList.toggle('hide');
+        backButtonRegister.classList.toggle('hide');
+    });
+
+    eMailButtonSignIn.addEventListener('click', () => {
+        signInForm.classList.toggle('hide');
+        signInButtons.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+    })
+
+    backButtonRegister.addEventListener('click', () => {
+        // registryForm.forEach(el => {
+        //     el.classList.toggle('hide');
+        // });
+        registryForm.classList.toggle('hide');
+        registryButtons.classList.toggle('hide');
+        backButtonRegister.classList.toggle('hide');
+    })
+
+    backButtonSignIn.addEventListener('click', () => {
+        signInForm.classList.toggle('hide');
+        signInButtons.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+    })
+
+    buttonPasswordRefresh.addEventListener('click', () => {
+        passwordRecovery.classList.toggle('hide');
+        signInForm.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+        backButtonRecovery.classList.toggle('hide');
+    })
+
+    backButtonRecovery.addEventListener('click', () => {
+        signInForm.classList.toggle('hide');
+        passwordRecovery.classList.toggle('hide');
+        backButtonSignIn.classList.toggle('hide');
+        backButtonRecovery.classList.toggle('hide');
+    })
+
+    buttonPerson.addEventListener('click', () => {
+        menu.classList.toggle('hide');
+    })
+
+    function cityChoose(e) {
+        let city = e.target.value;
+        cityPlace.textContent = `${city}`;
+    };
+
+    cityButtons.forEach(el => {
+        el.addEventListener('click', cityChoose)
+    });
+
+    let addressInput = document.querySelector('#addressInput');
+    let autoCompleteInput = document.querySelector('.autoComplete');
+    let search = document.querySelector('.search');
+    let addressInputUl = document.querySelector('#addressInput ul');
+
+    autoCompleteInput.addEventListener('focus', () => {
+        // addressInput.style.borderBottomLeftRadius = 0;
+        // addressInput.style.borderBottomRightRadius = 0;
+        // addressInput.style.borderBottom = 0;
+        // addressInput.style.boxShadow = 'none';
+        search.style.opacity = 0;
+        search.style.transition = '0.5s';
+    })
+
+    autoCompleteInput.addEventListener('blur', () => {
+        // addressInput.style.borderRadius = '50px';
+        // addressInput.style.border = '1px solid #97999B';
+        // addressInput.style.boxShadow = '0px 5px 20px rgba(0, 0, 0, 0.1)';
+        search.style.opacity = 1;
+    })
+
+</script>
+</body>
+</html>
