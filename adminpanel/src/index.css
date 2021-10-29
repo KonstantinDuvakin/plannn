@@ -1,0 +1,11 @@
+@import url("./fonts/font/stylesheet.css");
+
+* {
+    box-sizing: border-box;
+    font: 18px "Uniform Pro", SansSerif;
+}
+
+body {
+    margin: 0;
+    position: relative;
+}

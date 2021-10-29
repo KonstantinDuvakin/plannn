@@ -1,0 +1,77 @@
+.layout-modal .modal-content {
+    padding: 25px 60px;
+    display: grid;
+    justify-items: center;
+}
+
+.layout-modal .modal-header .modal-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.layout-modal .modal-header p {
+    width: 600px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    margin: 10px;
+    text-align: center;
+}
+
+.layout-modal .modal-body {
+    height: 500px;
+    overflow-y: scroll;
+    justify-content: center;
+}
+
+.layout-modal .modal-body h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.layout-modal .modal-body .layout-buttons {
+    margin-bottom: 5px;
+}
+
+.layout-modal .modal-body button {
+    width: 210px;
+    height: 210px;
+    background: none;
+    border-radius: 25px;
+    padding: 0;
+}
+
+.layout-modal .modal-body button:focus {
+    background: #97999B;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.layout-modal .modal-body img {
+    width: 180px;
+    margin-bottom: -10px;
+    margin-top: -20px;
+}
+
+.layout-modal .modal-body span {
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.layout-modal .layout-choose-button {
+    width: 200px;
+    font-weight: bold;
+    padding: 10px 55px;
+}
+
+.layout-modal .layout-choose-button:hover,
+.layout-modal .layout-choose-button:active,
+.layout-modal .layout-choose-button:focus {
+    background: #F9E547;
+    color: #000000;
+    box-shadow: none;
+}

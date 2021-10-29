@@ -1,0 +1,23 @@
+.no-projects {
+    padding-top: 140px;
+}
+
+.no-projects p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #97999B;
+    margin-bottom: 30px;
+}
+
+.no-projects button {
+    background: #F9E547;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    padding: 9px 45px;
+    border: none;
+    cursor: pointer;
+}

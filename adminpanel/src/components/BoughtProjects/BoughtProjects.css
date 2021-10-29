@@ -1,0 +1,16 @@
+.content-nothing {
+    margin-top: 250px;
+}
+
+.content-nothing p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #97999B;
+    margin-bottom: 25px;
+}
+
+.content-nothing img {
+    width: 75px;
+    color: #97999B;
+}

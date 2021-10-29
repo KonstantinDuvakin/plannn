@@ -1,0 +1,71 @@
+.lk-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px !important;
+}
+
+.lk-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.backBtn {
+    color: #97999B;
+    display: flex;
+    margin-left: 60px;
+}
+
+.backBtn img {
+    margin-right: 20px;
+}
+
+.lk-right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.lk-right-buttons button {
+    margin: 15px;
+}
+
+.lk-right-buttons img {
+    width: 24px;
+}
+
+.person .user-img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.lk-buttons .menu {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    list-style: none;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 5px 60px;
+}
+
+.lk-buttons .menu ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-end: 0;
+}
+
+.lk-buttons .menu ul li {
+    margin: 20px 0;
+}
+
+.lk-buttons .menu ul li a {
+    text-decoration: none;
+    color: #000000;
+}

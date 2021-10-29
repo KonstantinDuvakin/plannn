@@ -1,0 +1,120 @@
+.personal-info {
+    padding: 100px 150px;
+}
+
+.personal-info .user-img {
+    width: 160px;
+    height: 160px;
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+
+.personal-info .user-img img {
+    width: 96px;
+}
+
+.personal-info span {
+    margin-bottom: 15px;
+    padding: 0 100px;
+}
+
+.personal-info form {
+    margin-top: 60px;
+}
+
+.personal-info h1 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.personal-info .inputField {
+    display: grid;
+    text-align: left;
+}
+
+.personal-info label {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #97999B;
+    margin-bottom: 0;
+}
+
+.personal-info input {
+    border: 1px solid #97999B;
+    border-radius: 50px;
+    padding: 9px 40px;
+    margin-bottom: 10px;
+}
+
+.personal-info input:focus-visible {
+    outline: none;
+}
+
+.personal-info button {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 16px 96px;
+    border: none;
+    margin: 10px 0 30px;
+    cursor: pointer;
+}
+
+.additionalSettings h1 {
+    margin-bottom: 8px;
+}
+
+.additionalSettings h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 16px;
+    margin-top: 30px;
+}
+
+.additionalSettings .checkboxes {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: left;
+    padding: 0 100px;
+}
+
+.additionalSettings .checkboxes input {
+    padding: 0;
+}
+
+.additionalSettings .checkboxes input:focus {
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.additionalSettings .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.additionalSettings input {
+    margin: 0 16px 0 0;
+    color: #000000;
+}
+
+.additionalSettings label {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.additionalSettings button {
+    margin-top: 50px;
+}

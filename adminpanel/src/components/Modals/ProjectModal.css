@@ -1,0 +1,37 @@
+.project-modal .modal-dialog {
+    justify-content: center;
+}
+
+.project-modal .modal-content {
+    width: 600px;
+}
+
+.project-modal .modal-body {
+    justify-content: center;
+}
+
+.project-modal .modal-body button {
+    margin-top: 20px;
+    width: 250px;
+    background: #F9E547;
+}
+
+.project-modal .modal-body button:active,
+.project-modal .modal-body button:focus {
+    color: #000000;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.project-modal .modal-body span {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 130%;
+    text-align: center;
+}
+
+.project-modal .modal-body p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    margin: 90px 0;
+}

@@ -1,0 +1,71 @@
+.contacts-info {
+    padding: 100px 150px;
+}
+
+.contacts-info h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 40px;
+}
+
+.contacts-info .contact-buttons {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 45px;
+}
+
+.contacts-info button {
+    width: 285px;
+    height: 50px;
+    padding: 16px 101px 16px 102px !important;
+    margin: 20px 0px 0px 0px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.contacts-info .telegram-link {
+    background: #0088CC;
+    transition: 0.5s;
+}
+
+.contacts-info .telegram-link:active {
+    background: #006192;
+    transition: 0.5s;
+}
+
+.contacts-info .telegram-link img {
+    position: absolute;
+    left: 24px;
+    top: 15px;
+}
+
+.contacts-info .whatsapp-link {
+    background: #43D854;
+    transition: 0.5s;
+}
+
+.contacts-info .whatsapp-link:active {
+    background: #2DA73B;
+    transition: 0.5s;
+}
+
+.contacts-info .whatsapp-link img {
+    position: absolute;
+    left: 24px;
+    top: 15px;
+}
+
+.contacts-info p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,23 @@
+.logout {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.logout-btn {
+    background: #ffffff;
+    border: none;
+    color: #97999B;
+    cursor: pointer;
+}
+
+.logout-btn:active {
+    color: black;
+}
+
+.col-md-9 {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-left: 0;
+}

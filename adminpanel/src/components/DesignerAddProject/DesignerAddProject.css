@@ -1,0 +1,75 @@
+.add-project {
+    padding-left: 100px;
+}
+
+.add-project h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    margin: 30px 0 15px;
+}
+
+.add-project button {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 16px 96px;
+    border: none;
+    margin: 10px 0 30px;
+    cursor: pointer;
+}
+
+.add-project-fill {
+    margin-top: 90px;
+}
+
+.add-project-fill .tab-pane {
+    padding-right: 0;
+}
+
+.send-to-moderator {
+    background: #F9E547 !important;
+    color: #000000;
+}
+
+.send-to-moderator:active,
+.send-to-moderator:focus,
+.send-to-moderator:hover {
+    color: #000000;
+    box-shadow: none !important;
+}
+
+.to-moderate-modal .modal-dialog {
+    justify-content: center;
+}
+
+.to-moderate-modal .modal-content {
+    width: 600px;
+}
+
+.to-moderate-modal .modal-body {
+    display: block;
+    text-align: center;
+}
+
+.to-moderate-modal p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.to-moderate-modal button {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 16px !important;
+    border: none;
+    background: #F9E547 !important;
+    width: 180px;
+}

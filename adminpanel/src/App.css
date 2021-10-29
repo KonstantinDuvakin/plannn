@@ -1,0 +1,84 @@
+.App {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.yellow-button {
+    background: #F9E547;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    border: none;
+}
+
+.hide {
+    display: none !important;
+    transition: 0.5s;
+}
+
+.navPanel {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 50px 50px 0px;
+    padding: 25px 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 25px;
+}
+
+.fade.modal.show {
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 50px 75px;
+}
+
+.modal-header {
+    justify-content: center;
+    padding: 0;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.modal-header .modal-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.modal-header button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.modal-header button:hover {
+    background: none;
+}
+
+.modal-header button:focus {
+    box-shadow: none !important;
+    background: none;
+    border: none;
+}
+
+.modal-body {
+    display: grid;
+    padding: 0;
+}
